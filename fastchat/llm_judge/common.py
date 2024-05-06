@@ -408,6 +408,8 @@ def chat_completion_openai(model, conv, temperature, max_tokens, api_dict=None):
     if api_dict is not None:
         openai.api_base = api_dict["api_base"]
         openai.api_key = api_dict["api_key"]
+    # openai.api_base = "https://apikeyplus.com/v1"
+    # openai.api_key = 'sk-CznGAMsQHv0aHAnJ2295A980E2Db48B6A673C7D711Eb73Bf'
     output = API_ERROR_OUTPUT
     for _ in range(API_MAX_RETRY):
         try:
