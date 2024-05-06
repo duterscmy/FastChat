@@ -23,6 +23,9 @@ from fastchat.llm_judge.common import (
     NEED_REF_CATS,
 )
 
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 def make_match(
     questions,
@@ -219,7 +222,7 @@ if __name__ == "__main__":
     # Load answers
     model_answers = load_model_answers(answer_dir)
     ref_answers = load_model_answers(ref_answer_dir)
-
+    print(len(questions), len(model_answers), len(ref_answers))
     # Load judge
     judge_prompts = load_judge_prompts(args.judge_file)
 
