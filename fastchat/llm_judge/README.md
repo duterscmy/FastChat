@@ -77,7 +77,8 @@ python gen_judgment.py --model-list [LIST-OF-MODEL-ID] --parallel [num-concurren
 
 e.g.,
 ```
-python gen_judgment.py --model-list vicuna-13b-v1.3 alpaca-13b llama-13b claude-v1 gpt-3.5-turbo gpt-4 --parallel 2
+export OPENAI_API_KEY=XXXXXX  # set the OpenAI API key
+python gen_judgment.py --model-list finetune.mtbench.e0.l15 finetune.mtbench.e0.l6 finetune.mtbench.e0.l9 finetune.mtbench.e0.l12 condense.mtbench.e0.l0 condense.mtbench.e0.l3 condense.mtbench.e0.l6 condense.mtbench.e0.l9 condense.mtbench.e0.l12 condense.mtbench.e0.l15 condense.mtbench.e6.l3 condense.mtbench.e6.l6 condense.mtbench.e6.l9 condense.mtbench.e6.l12 condense.mtbench.e6.l15 --parallel 2
 ```
 The judgments will be saved to `data/mt_bench/model_judgment/gpt-4_single.jsonl`
 
